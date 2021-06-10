@@ -1,0 +1,473 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ConvII
+</name>
+</assembly>
+<members>
+<member name="T:ConvII.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:ConvII.My.MyWebExtension.Computer">
+ <summary>
+ Devuelve información sobre el equipo host.
+ </summary>
+</member>
+<member name="P:ConvII.My.MyWebExtension.User">
+ <summary>
+ Devuelve información del usuario web actual.
+ </summary>
+</member>
+<member name="P:ConvII.My.MyWebExtension.Request">
+ <summary>
+ Devuelve un objeto Request.
+ </summary>
+</member>
+<member name="P:ConvII.My.MyWebExtension.Response">
+ <summary>
+ Devuelve un objeto Response.
+ </summary>
+</member>
+<member name="P:ConvII.My.MyWebExtension.Log">
+ <summary>
+ Devuelve el objeto de registro Asp.
+ </summary>
+</member>
+<member name="T:ConvII.DataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.CONVERSIONDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.TIPODATOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.DOMINIODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDESCRIPCIONDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDOMINIODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADSISTEMATIPODATOSDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.LOGDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.SISTEMADataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.CONVERSIONRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.TIPODATOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.DOMINIORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDESCRIPCIONRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDOMINIORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADSISTEMATIPODATOSRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.LOGRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.SISTEMARow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.CONVERSIONRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.TIPODATOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.DOMINIORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDESCRIPCIONRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADDOMINIORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.ENTIDADSISTEMATIPODATOSRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.LOGRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1.SISTEMARowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.CONVERSIONTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.TIPODATOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.DOMINIOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.ENTIDADTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.ENTIDADDESCRIPCIONTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.ENTIDADDOMINIOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.ENTIDADSISTEMATIPODATOSTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.LOGTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.SISTEMATableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ConvII.DataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(ConvII.DataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ConvII.DataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(ConvII.DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ConvII.DataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(ConvII.DataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ConvII.DataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ConvII.DataSet1TableAdapters.TableAdapterManager.UpdateAll(ConvII.DataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ConvII.DataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="F:ConvII.Conversiones._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._DropDownList1">
+<summary>
+Control DropDownList1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._DropDownList2">
+<summary>
+Control DropDownList2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._DropDownList3">
+<summary>
+Control DropDownList3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._GridDatos">
+<summary>
+Control GridDatos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._Button1">
+<summary>
+Control Button1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._TextBox1">
+<summary>
+Control TextBox1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Conversiones._Button2">
+<summary>
+Control Button2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._txtNuevaEntidad">
+<summary>
+Control txtNuevaEntidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._btnAgregar">
+<summary>
+Control btnAgregar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._cmbEntidadEditar">
+<summary>
+Control cmbEntidadEditar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._cmbEntidadEliminar">
+<summary>
+Control cmbEntidadEliminar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._txtEditarEntidad">
+<summary>
+Control txtEditarEntidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._btnEditar">
+<summary>
+Control btnEditar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._lblAgregarScript">
+<summary>
+Control lblAgregarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._lblEditarScript">
+<summary>
+Control lblEditarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.SiteMaster._MainContent">
+<summary>
+Control MainContent.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Site_Mobile._Head1">
+<summary>
+Control Head1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Site_Mobile._HeadContent">
+<summary>
+Control HeadContent.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Site_Mobile._form1">
+<summary>
+control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Site_Mobile._FeaturedContent">
+<summary>
+Control FeaturedContent.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Site_Mobile._MainContent">
+<summary>
+Control MainContent.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Site_Mobile._ViewSwitcher1">
+<summary>
+Control ViewSwitcher1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+</members>
+</doc>
