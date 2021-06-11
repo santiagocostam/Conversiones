@@ -24,6 +24,9 @@
             <asp:TextBox ID="txtEditarEntidad" runat="server" Visible="False" Width="300"></asp:TextBox>
             <asp:Button ID="btnEditar" runat="server" Text="Editar" Visible="False" />
         </td>
+         <td>
+            <asp:Button ID="btnEliminar" runat="server" Text="Editar" Visible="False" />
+        </td>
     </tr>
     <tr><td> <font color="white"> -</font></td>
     </tr>
@@ -33,7 +36,8 @@
       <td>
         <asp:Label ID="lblEditarScript" runat="server" Text=""></asp:Label></td>
   </tr>
-    
+    <tr><td> <font color="white"> -</font></td></tr> <tr><td> <font color="white"> -</font></td></tr> <tr><td> <font color="white"> -</font></td></tr> <tr><td> <font color="white"> -</font></td></tr>
+     <tr><td> <font color="white"> -</font></td></tr> <tr><td> <font color="white"> -</font></td></tr> <tr><td> <font color="white"> -</font></td></tr> <tr><td> <font color="white"> -</font></td></tr>
 
 </table>
     

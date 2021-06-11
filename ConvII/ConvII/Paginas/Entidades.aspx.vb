@@ -58,8 +58,8 @@
         End If
     End Sub
 
-    'Private Sub cmbEntidadEliminar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEntidadEliminar.SelectedIndexChanged
-    '    txtEditarEntidad.Visible = True
-    '    btnEditar.Visible = True
-    'End Sub
+    Private Sub cmbEntidadEliminar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEntidadEliminar.SelectedIndexChanged
+
+        btnEliminar.Visible = True
+    End Sub
 End Class

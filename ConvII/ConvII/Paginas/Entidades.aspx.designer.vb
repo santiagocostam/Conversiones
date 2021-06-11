@@ -68,6 +68,15 @@ Partial Public Class Entidades
     Protected WithEvents btnEditar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control btnEliminar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control lblAgregarScript.
     '''</summary>
     '''<remarks>
