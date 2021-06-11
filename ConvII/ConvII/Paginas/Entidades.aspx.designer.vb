@@ -77,6 +77,15 @@ Partial Public Class Entidades
     Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control txtAgregarScript.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtAgregarScript As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control lblAgregarScript.
     '''</summary>
     '''<remarks>
@@ -86,6 +95,15 @@ Partial Public Class Entidades
     Protected WithEvents lblAgregarScript As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control txtEditarScript.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtEditarScript As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control lblEditarScript.
     '''</summary>
     '''<remarks>
@@ -93,4 +111,22 @@ Partial Public Class Entidades
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblEditarScript As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control txtBorrarScript.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtBorrarScript As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control lblBorrarScript.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblBorrarScript As Global.System.Web.UI.WebControls.Label
 End Class

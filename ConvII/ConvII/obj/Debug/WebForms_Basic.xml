@@ -397,6 +397,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:ConvII.Entidades._txtAgregarScript">
+<summary>
+Control txtAgregarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:ConvII.Entidades._lblAgregarScript">
 <summary>
 Control lblAgregarScript.
@@ -406,9 +415,36 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:ConvII.Entidades._txtEditarScript">
+<summary>
+Control txtEditarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:ConvII.Entidades._lblEditarScript">
 <summary>
 Control lblEditarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._txtBorrarScript">
+<summary>
+Control txtBorrarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._lblBorrarScript">
+<summary>
+Control lblBorrarScript.
 </summary>
 <remarks>
 Campo generado automáticamente.
