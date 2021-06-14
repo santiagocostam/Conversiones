@@ -262,6 +262,15 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="F:ConvII._Default._TextBox1">
+<summary>
+Control TextBox1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:ConvII.Conversiones._form1">
 <summary>
 Control form1.
@@ -370,6 +379,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:ConvII.Entidades._btnEliminar">
+<summary>
+Control btnEliminar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:ConvII.Entidades._txtEditarEntidad">
 <summary>
 Control txtEditarEntidad.
@@ -388,27 +406,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:ConvII.Entidades._btnEliminar">
-<summary>
-Control btnEliminar.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:ConvII.Entidades._txtAgregarScript">
 <summary>
 Control txtAgregarScript.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:ConvII.Entidades._lblAgregarScript">
-<summary>
-Control lblAgregarScript.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -424,27 +424,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:ConvII.Entidades._lblEditarScript">
-<summary>
-Control lblEditarScript.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:ConvII.Entidades._txtBorrarScript">
 <summary>
 Control txtBorrarScript.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:ConvII.Entidades._lblBorrarScript">
-<summary>
-Control lblBorrarScript.
 </summary>
 <remarks>
 Campo generado automáticamente.

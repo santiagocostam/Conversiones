@@ -30,8 +30,8 @@ Public Class Entidades
 
         'Limpieza
         txtEditarEntidad.Text = ""
-        txtEditarEntidad.Visible = False
-        btnEditar.Visible = False
+        'txtEditarEntidad.Visible = False
+        'btnEditar.Visible = False
 
     End Sub
 
@@ -48,13 +48,6 @@ Public Class Entidades
             "  VALUES (" & idEntidad & ",'" & txtNuevaEntidad.Text & "')" & vbCrLf &
             "GO"
             txtAgregarScript.Text = sScript
-            'lblAgregarScript.Text = "USE [Conversiones_ESB]" & vbCrLf &
-            '& "GO" & vbCrLf
-            '    "INSERT INTO [dbo].[ENTIDAD]" & vbNewLine &
-            '" ([ENTIDADID] ,[ENTIDADNOMBRE])" & vbNewLine &
-            '"  VALUES (" & idEntidad & ",'" & txtNuevaEntidad.Text & "')" & vbNewLine &
-            '"GO"
-            'lblAgregarScript.Text = "USE [Conversiones_ESB] GO INSERT INTO [dbo].[ENTIDAD] ([ENTIDADID] ,[ENTIDADNOMBRE])  VALUES (" & idEntidad & ",'" & txtNuevaEntidad.Text & "') GO"
 
             Dim path As String = "C:\eMozart\AgregarEntidad" & txtNuevaEntidad.Text & ".txt"
             crearTxtScript(path, sScript)
@@ -72,17 +65,17 @@ Public Class Entidades
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        Dim siExiste As Boolean = False, sScripBase As String = ""
+        Dim siExiste As Boolean = False, sScriptBase As String = ""
 
 
         If txtEditarEntidad.Text <> "" Then
             siExiste = Man.verificarNombreEntidad(txtEditarEntidad.Text)
             If siExiste = False Then
-                sScripBase = "UPDATE [dbo].[ENTIDAD] Set  [ENTIDADNOMBRE]  = '" & txtEditarEntidad.Text & "' WHERE [ENTIDADID] =" & cmbEntidadEditar.SelectedValue & " "
+                sScriptBase = "UPDATE [dbo].[ENTIDAD] Set  [ENTIDADNOMBRE]  = '" & txtEditarEntidad.Text & "' WHERE [ENTIDADID] =" & cmbEntidadEditar.SelectedValue & " "
                 txtEditarScript.Text = "USE [Conversiones_ESB]" & vbCrLf & "GO" & vbCrLf & "UPDATE [dbo].[ENTIDAD]" & vbCrLf & "SET [ENTIDADNOMBRE]  = '" & txtEditarEntidad.Text & "'" & vbCrLf & "WHERE [ENTIDADID] =" & cmbEntidadEditar.SelectedValue & "" & vbCrLf & "GO"
                 Dim path As String = "C:\eMozart\EditarEntidad" & txtEditarEntidad.Text & ".txt"
                 crearTxtScript(path, txtEditarScript.Text)
-                Man.abmEntidad(sScripBase)
+                Man.abmEntidad(sScriptBase)
 
                 llenarCombos()
 
@@ -96,30 +89,50 @@ Public Class Entidades
     End Sub
 
     Private Sub cmbEntidadEliminar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEntidadEliminar.SelectedIndexChanged
-        lblBorrarScript.Text = ""
+        txtBorrarScript.Text = ""
         btnEliminar.Visible = True
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim iReturnValue As Integer, dtSistemas As New DataTable, dtConversiones As New DataTable, sScript As String = ""
+        Dim path As String = "C:\eMozart\EliminarEntidad" & cmbEntidadEliminar.SelectedItem.Text & ".txt", sScriptBase As String = ""
 
-        lblBorrarScript.Text = ""
+
 
         ' dtSistemas = Man.verSistemas(cmbEntidadEliminar.SelectedValue)
         dtConversiones = Man.verConversionesSoloEntidad(cmbEntidadEliminar.SelectedValue)
 
         If dtConversiones.Rows.Count = 0 Then
             iReturnValue = MsgBox("Atención!!! Usted está a punto de borrar una entidad", MsgBoxStyle.YesNo, "Bancor")
-            sScript = "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDAD] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO"
+            sScript = "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDAD] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDADDESCRIPCION] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDADDOMINIO] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDADSISTEMATIPODATOS] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScriptBase = "DELETE FROM [dbo].[ENTIDADDESCRIPCION] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";"
+            sScriptBase = sScriptBase & "DELETE FROM [dbo].[ENTIDADDOMINIO] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";"
+            sScriptBase = sScriptBase & "DELETE FROM [dbo].[ENTIDADSISTEMATIPODATOS] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";"
+            sScriptBase = sScriptBase & "DELETE FROM [dbo].[ENTIDAD] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ""
         Else
             iReturnValue = MsgBox("Atención!!! Usted está a punto de borrar una entidad que posee conversiones", MsgBoxStyle.YesNo, "Bancor")
-            sScript = "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[CONVERSION] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO"
-            sScript = sScript & vbCrLf & vbCr & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDAD] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO"
+            sScript = "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[CONVERSION] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDADDESCRIPCION] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDADDOMINIO] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDADSISTEMATIPODATOS] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScript = sScript & "USE [Conversiones_ESB] " & vbCrLf & "GO " & vbCrLf & "DELETE FROM [dbo].[ENTIDAD] " & vbCrLf & "WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & "" & vbCrLf & "GO" & vbCrLf
+            sScriptBase = "DELETE FROM [dbo].[ENTIDADDESCRIPCION] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";"
+            sScriptBase = sScriptBase & "DELETE FROM [dbo].[ENTIDADDOMINIO] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";"
+            sScriptBase = sScriptBase & "DELETE FROM [dbo].[ENTIDADSISTEMATIPODATOS] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";"
+            sScriptBase = sScriptBase & "DELETE FROM [dbo].[CONVERSION]WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ";DELETE FROM [dbo].[ENTIDAD] WHERE entidadId= " & cmbEntidadEliminar.SelectedValue & ""
         End If
 
 
         If iReturnValue = MsgBoxResult.Yes Then
-            lblBorrarScript.Text = sScript
+            txtBorrarScript.Text = sScript
+            crearTxtScript(path, txtBorrarScript.Text)
+            Man.abmEntidad(sScriptBase)
+
+            llenarCombos()
+
         End If
 
         '//// Creación txt
@@ -141,10 +154,6 @@ Public Class Entidades
         ''    'UploadStatusLabel.Text = "Your file was saved as " & fileName
         ''End If
 
-
-
-        Dim path As String = "C:\eMozart\eliminarEntidad" & cmbEntidadEliminar.SelectedItem.Text & ".txt"
-        crearTxtScript(path, lblBorrarScript.Text)
 
 
     End Sub
