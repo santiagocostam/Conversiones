@@ -112,6 +112,33 @@ Public Class Mantenimientos
             desconectar()
         End Try
     End Function
+    Public Function verConversionesSoloEntidad(ByVal idEntidad As Integer) As DataTable
+        Dim Query As String = "SELECT DISTINCT [ENTIDADID]
+      ,a.[SISTEMAID_DESTINO]
+      ,a.[VALOR_DESTINO]
+	  ,b.SISTEMANOMBRE as Destino
+	  ,a.[SISTEMAID_ORIGEN]
+	  ,a.[VALOR_ORIGEN]
+	  ,(select SISTEMANOMBRE  from sistema where SISTEMAID=a.SISTEMAID_ORIGEN and SISTEMAID='740') as Origen
+  FROM [Conversiones_ESB].[dbo].[CONVERSION] a, SISTEMA b
+  where a.ENTIDADID=" & idEntidad & " "
+
+        Try
+            conectar()
+            Dim cmd As New SqlCommand(Query, conn)
+            cmd.CommandType = CommandType.Text
+            Dim resultado As SqlDataReader = cmd.ExecuteReader
+            Dim tablas As DataTable = New DataTable
+            tablas.Load(resultado)
+            Return tablas
+
+        Catch ex As Exception
+            RaiseEvent Errores(ex.Message)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
     Public Function buscarIdEntidadMax()
 
         Dim Query As String = "SELECT max([ENTIDADID]) FROM [Conversiones_ESB].[dbo].[ENTIDAD]"
@@ -162,4 +189,24 @@ Public Class Mantenimientos
             desconectar()
         End Try
     End Function
+    Public Sub abmEntidad(ByVal txtQuery As String)
+
+        Try
+            conectar()
+
+
+            Dim cmd As New SqlCommand(txtQuery, conn)
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = txtQuery
+            cmd.ExecuteNonQuery()
+
+
+
+        Catch ex As Exception
+            RaiseEvent Errores(ex.Message)
+
+        Finally
+            desconectar()
+        End Try
+    End Sub
 End Class

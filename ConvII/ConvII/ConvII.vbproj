@@ -207,6 +207,7 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Clases\Conexiones\Conexiones.vb" />
+    <Compile Include="Clases\FilesOpen.vb" />
     <Compile Include="Clases\Mantenimientos\Mantenimientos.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -263,6 +264,7 @@
       <DependentUpon>Entidades.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Paginas\OpenFileDialog.vb" />
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>

@@ -50,6 +50,15 @@ Partial Public Class Entidades
     Protected WithEvents cmbEntidadEliminar As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control btnEliminar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control txtEditarEntidad.
     '''</summary>
     '''<remarks>
@@ -68,20 +77,29 @@ Partial Public Class Entidades
     Protected WithEvents btnEditar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control lblAgregarScript.
+    '''Control txtAgregarScript.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblAgregarScript As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtAgregarScript As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control lblEditarScript.
+    '''Control txtEditarScript.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblEditarScript As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtEditarScript As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtBorrarScript.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtBorrarScript As Global.System.Web.UI.WebControls.TextBox
 End Class
