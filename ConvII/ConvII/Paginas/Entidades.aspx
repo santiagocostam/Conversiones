@@ -34,7 +34,8 @@
     </tr>
   <tr>
      
-      <td> <asp:TextBox ID="txtAgregarScript" runat="server" TextMode="MultiLine" Height="280px" Width="400px"></asp:TextBox>
+      <td>
+          <asp:TextBox ID="txtAgregarScript" runat="server" TextMode="MultiLine" Height="280px" Width="400px"></asp:TextBox>
         </td>
       <td>
           <asp:TextBox ID="txtEditarScript" runat="server" TextMode="MultiLine" Height="280px" Width="400px"></asp:TextBox>

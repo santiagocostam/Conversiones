@@ -23,7 +23,7 @@
             </div>
         </div>
     <div>
-<asp:TextBox ID="TextBox1" runat="server" Visible="False" Height="400"></asp:TextBox>
+<asp:TextBox ID="TextBox1" runat="server" Height="275" BorderWidth="0"></asp:TextBox>
     </div>
     
 
