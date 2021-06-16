@@ -209,4 +209,28 @@ Public Class Mantenimientos
             desconectar()
         End Try
     End Sub
+    Public Function verEntidadDescripcion(ByVal idEntidad As Integer)
+
+        Dim Query As String = "select ENTIDADDESCRIPCION.DESCRIPCION,DOMINIO.DOMINIONOMBRE,sistema.SISTEMAID,sistema.SISTEMANOMBRE" &
+        " from entidad,DOMINIO,SISTEMA,ENTIDADDESCRIPCION,ENTIDADDOMINIO,ENTIDADSISTEMATIPODATOS" &
+        " where ENTIDAD.ENTIDADID=ENTIDADDESCRIPCION.ENTIDADID and ENTIDAD.ENTIDADID=ENTIDADDOMINIO.ENTIDADID and" &
+        " ENTIDAD.ENTIDADID=ENTIDADSISTEMATIPODATOS.ENTIDADID and ENTIDAD.ENTIDADID=" & idEntidad & ""
+
+        Try
+            conectar()
+            Dim cmd As New SqlCommand(Query, conn)
+            cmd.CommandType = CommandType.Text
+            Dim resultado As SqlDataReader = cmd.ExecuteReader
+            Dim tablas As DataTable = New DataTable
+
+            tablas.Load(resultado)
+            Return tablas
+
+        Catch ex As Exception
+            RaiseEvent Errores(ex.Message)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class

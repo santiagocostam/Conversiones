@@ -27,6 +27,11 @@ Public Class Entidades
         cmbEntidadEliminar.DataTextField = "entidadnombre"
         cmbEntidadEliminar.DataBind()
 
+        cmbVerEntidad.DataSource = tabla
+        cmbVerEntidad.DataValueField = "entidadid"
+        cmbVerEntidad.DataTextField = "entidadnombre"
+        cmbVerEntidad.DataBind()
+
         'Limpieza
         txtEditarEntidad.Text = ""
         txtNuevaEntidad.Text = ""
@@ -204,6 +209,25 @@ Public Class Entidades
     Private Sub txtNuevaEntidad_TextChanged(sender As Object, e As EventArgs) Handles txtNuevaEntidad.TextChanged
         txtAgregarScript.Text = ""
 
+    End Sub
+
+    Private Sub cmbSeleccion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSeleccion.SelectedIndexChanged
+        If cmbSeleccion.SelectedValue = 0 Then
+            Panel2.Visible = True
+            Panel1.Visible = False
+        End If
+        If cmbSeleccion.SelectedValue = 1 Then
+            Panel1.Visible = True
+            Panel2.Visible = False
+        End If
+    End Sub
+
+    Private Sub cmbVerEntidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVerEntidad.SelectedIndexChanged
+        Dim tabla As New DataTable
+        tabla = Man.verEntidadDescripcion(cmbVerEntidad.SelectedValue)
+        tabla.Columns.Add()
+        gvEntidadDetalle.DataSource = tabla
+        gvEntidadDetalle.DataBind()
     End Sub
 
 

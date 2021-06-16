@@ -2,10 +2,12 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 <div>
-       
+    <asp:DropDownList ID="cmbSeleccion" runat="server" AppendDataBoundItems="true" AutoPostBack="True"><asp:ListItem Value="0">Detalle Entidad</asp:ListItem><asp:ListItem Value="1">ABM Entidad</asp:ListItem></asp:DropDownList>
 </div>
 <div>
+    <asp:Panel ID="Panel1" runat="server" Visible="false">
 <table style="width:100%;border-style:solid">
+    
   <tr>
     <th style="width:33%"><font face="Verdana" color="E74617">Nueva Entidad</font></th>
     <th style="width:33%"><font face="Verdana" color="E74617">Editar Entidad</font></th>
@@ -47,8 +49,21 @@
     
 
 </table>
-    
+  </asp:Panel>  
+    <asp:Panel ID="Panel2" runat="server" Visible="true">
+        <table style="width:100%;border-style:solid">
+              <tr>
+                    <th style="width:33%"><font face="Verdana" color="E74617">Ver Entidad</font></th>
+  
+                </tr>
+            <tr>
+                 <td><asp:DropDownList ID="cmbVerEntidad" runat="server" AutoPostBack="True" Width="402px"></asp:DropDownList></td>
+            </tr>
+            <tr><td>
+            <asp:GridView ID="gvEntidadDetalle" runat="server" Height="400"></asp:GridView></td></tr>
+            </table>
 
+    </asp:Panel>
 </div>
 
 
