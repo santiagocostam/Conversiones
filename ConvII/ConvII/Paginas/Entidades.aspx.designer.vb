@@ -147,4 +147,13 @@ Partial Public Class Entidades
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents gvEntidadDetalle As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Control txtImagen.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtImagen As Global.System.Web.UI.WebControls.TextBox
 End Class

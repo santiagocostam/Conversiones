@@ -6,8 +6,10 @@ Imports Microsoft.Win32
 Public Class Entidades
     Inherits System.Web.UI.Page
     Dim WithEvents Man As New Mantenimientos
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If (Page.IsPostBack) = False Then
+            Me.BindGrid()
             llenarCombos()
 
         End If
@@ -19,17 +21,17 @@ Public Class Entidades
 
         cmbEntidadEditar.DataSource = tabla
         cmbEntidadEditar.DataValueField = "entidadid"
-        cmbEntidadEditar.DataTextField = "entidadnombre"
+        cmbEntidadEditar.DataTextField = "nombre"
         cmbEntidadEditar.DataBind()
 
         cmbEntidadEliminar.DataSource = tabla
         cmbEntidadEliminar.DataValueField = "entidadid"
-        cmbEntidadEliminar.DataTextField = "entidadnombre"
+        cmbEntidadEliminar.DataTextField = "nombre"
         cmbEntidadEliminar.DataBind()
 
         cmbVerEntidad.DataSource = tabla
         cmbVerEntidad.DataValueField = "entidadid"
-        cmbVerEntidad.DataTextField = "entidadnombre"
+        cmbVerEntidad.DataTextField = "nombre"
         cmbVerEntidad.DataBind()
 
         'Limpieza
@@ -223,12 +225,16 @@ Public Class Entidades
     End Sub
 
     Private Sub cmbVerEntidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbVerEntidad.SelectedIndexChanged
-        Dim tabla As New DataTable
-        tabla = Man.verEntidadDescripcion(cmbVerEntidad.SelectedValue)
-        tabla.Columns.Add()
-        gvEntidadDetalle.DataSource = tabla
-        gvEntidadDetalle.DataBind()
+        'Dim tabla As New DataTable
+        'tabla = Man.verEntidadDescripcion(cmbVerEntidad.SelectedValue)
+        'tabla.Columns.Add()
+        'gvEntidadDetalle.DataSource = tabla
+        'gvEntidadDetalle.DataBind()
+        gvEntidadDetalle.PageIndex = 0
+        BindGrid()
     End Sub
+
+
 
 
     ' '/// poner en el front
@@ -237,4 +243,28 @@ Public Class Entidades
 
     '</div>
 
+    Private Sub BindGrid()
+        Dim tabla As New DataTable
+        If cmbVerEntidad.SelectedValue <> "" Then
+            gvEntidadDetalle.Visible = True
+            txtImagen.Visible = False
+            tabla = Man.verEntidadDescripcion(cmbVerEntidad.SelectedValue)
+            If tabla.Rows.Count > 0 Then
+                gvEntidadDetalle.DataSource = tabla
+                gvEntidadDetalle.DataBind()
+            Else
+                gvEntidadDetalle.Visible = False
+                txtImagen.Visible = True
+            End If
+
+        Else
+            gvEntidadDetalle.Visible = False
+            txtImagen.Visible = True
+        End If
+    End Sub
+
+    Protected Sub OnPageIndexChanging(sender As Object, e As GridViewPageEventArgs)
+        gvEntidadDetalle.PageIndex = e.NewPageIndex
+        Me.BindGrid()
+    End Sub
 End Class

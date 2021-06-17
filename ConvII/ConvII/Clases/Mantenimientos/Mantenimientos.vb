@@ -42,7 +42,8 @@ Public Class Mantenimientos
         End Try
     End Function
     Public Function verEntidadesTodas() As DataTable
-        Dim Query As String = "SELECT [ENTIDADID],[ENTIDADNOMBRE] FROM [Conversiones_ESB].[dbo].[ENTIDAD] order by [ENTIDADNOMBRE]"
+        'Dim Query As String = "SELECT [ENTIDADID],([ENTIDADNOMBRE]+[ENTIDADID]) as nombre FROM [Conversiones_ESB].[dbo].[ENTIDAD] order by [ENTIDADNOMBRE]"
+        Dim query As String = "SELECT [ENTIDADID],concat_ws (' - ',[ENTIDADid],[ENTIDADNOMBRE]) as nombre FROM [Conversiones_ESB].[dbo].[ENTIDAD] order by [ENTIDADNOMBRE]"
 
         Try
             conectar()
