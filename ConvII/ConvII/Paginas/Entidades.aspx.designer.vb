@@ -140,6 +140,15 @@ Partial Public Class Entidades
     Protected WithEvents cmbVerEntidad As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control cmbSistema.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cmbSistema As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Control gvEntidadDetalle.
     '''</summary>
     '''<remarks>

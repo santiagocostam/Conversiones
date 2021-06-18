@@ -60,7 +60,8 @@
                  <td><asp:DropDownList ID="cmbVerEntidad" runat="server" AutoPostBack="True" Width="402px"></asp:DropDownList></td>
             </tr>
             <tr><td>
-            <asp:GridView ID="gvEntidadDetalle" runat="server" Height="300" Width="1329" AllowPaging="true" OnPageIndexChanging="OnPageIndexChanging" PageSize="12" Visible="false" Font-Size="Small" HeaderStyle-BackColor="#E74617"></asp:GridView>
+            <asp:GridView ID="gvEntidadDetalle" runat="server" Height="300" Width="1329" AllowPaging="true" OnPageIndexChanging="OnPageIndexChanging" PageSize="12" Visible="false" Font-Size="Small" HeaderStyle-BackColor="#E74617" HeaderStyle-ForeColor="White">
+            </asp:GridView>
                 <asp:TextBox ID="txtImagen" runat="server" Visible="false" Height="300" Width="1329"></asp:TextBox>
                 </td></tr>
             </table>
