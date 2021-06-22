@@ -303,18 +303,18 @@ Public Class Entidades
         If cmbVerEntidad.SelectedValue <> "" Then
             'gvEntidadDetalle.Visible = True
             'txtImagen.Visible = False
-            tabla = Man.verEntidadDescripcionSISTEMA(cmbVerEntidad.SelectedValue)
+            tabla = Man.verEntidadDescripcionSISTEMA(cmbVerEntidad.SelectedValue, cmbSistema.SelectedValue)
             If tabla.Rows.Count > 0 Then
                 cmbSistema.DataSource = tabla
-                cmbSistema.DataValueField = "entidadid"
-                cmbSistema.DataTextField = "nombre"
+                cmbSistema.DataValueField = "idSistema"
+                cmbSistema.DataTextField = "Sistema"
                 cmbVerEntidad.DataBind()
 
             End If
-
-        Else
-            gvEntidadDetalle.Visible = False
-            txtImagen.Visible = True
+            Return tabla
+            'Else
+            '    gvEntidadDetalle.Visible = False
+            '    txtImagen.Visible = True
         End If
     End Function
 End Class
