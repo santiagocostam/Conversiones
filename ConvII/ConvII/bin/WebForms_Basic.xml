@@ -343,6 +343,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:ConvII.Entidades._cmbSeleccion">
+<summary>
+Control cmbSeleccion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._Panel1">
+<summary>
+Control Panel1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:ConvII.Entidades._txtNuevaEntidad">
 <summary>
 Control txtNuevaEntidad.
@@ -427,6 +445,51 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:ConvII.Entidades._txtBorrarScript">
 <summary>
 Control txtBorrarScript.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._Panel2">
+<summary>
+Control Panel2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._cmbVerEntidad">
+<summary>
+Control cmbVerEntidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._cmbSistema">
+<summary>
+Control cmbSistema.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._gvEntidadDetalle">
+<summary>
+Control gvEntidadDetalle.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ConvII.Entidades._txtImagen">
+<summary>
+Control txtImagen.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -42,7 +42,8 @@ Public Class Mantenimientos
         End Try
     End Function
     Public Function verEntidadesTodas() As DataTable
-        Dim Query As String = "SELECT [ENTIDADID],[ENTIDADNOMBRE] FROM [Conversiones_ESB].[dbo].[ENTIDAD] order by [ENTIDADNOMBRE]"
+        'Dim Query As String = "SELECT [ENTIDADID],([ENTIDADNOMBRE]+[ENTIDADID]) as nombre FROM [Conversiones_ESB].[dbo].[ENTIDAD] order by [ENTIDADNOMBRE]"
+        Dim query As String = "SELECT [ENTIDADID],concat_ws (' - ',[ENTIDADid],[ENTIDADNOMBRE]) as nombre FROM [Conversiones_ESB].[dbo].[ENTIDAD] order by [ENTIDADNOMBRE]"
 
         Try
             conectar()
@@ -209,4 +210,52 @@ Public Class Mantenimientos
             desconectar()
         End Try
     End Sub
+    Public Function verEntidadDescripcion(ByVal idEntidad As Integer)
+
+        Dim Query As String = "select [ENTIDADDESCRIPCION].[VALOR] as Valor,ENTIDADDESCRIPCION.DESCRIPCION as Descripción,DOMINIO.DOMINIONOMBRE as Dominio,sistema.SISTEMAID as IdSistema,sistema.SISTEMANOMBRE as Sistema" &
+        " from entidad,DOMINIO,SISTEMA,ENTIDADDESCRIPCION,ENTIDADDOMINIO,ENTIDADSISTEMATIPODATOS" &
+        " where ENTIDAD.ENTIDADID=ENTIDADDESCRIPCION.ENTIDADID and ENTIDAD.ENTIDADID=ENTIDADDOMINIO.ENTIDADID and" &
+        " ENTIDAD.ENTIDADID=ENTIDADSISTEMATIPODATOS.ENTIDADID and ENTIDAD.ENTIDADID=" & idEntidad & ""
+
+        Try
+            conectar()
+            Dim cmd As New SqlCommand(Query, conn)
+            cmd.CommandType = CommandType.Text
+            Dim resultado As SqlDataReader = cmd.ExecuteReader
+            Dim tablas As DataTable = New DataTable
+
+            tablas.Load(resultado)
+            Return tablas
+
+        Catch ex As Exception
+            RaiseEvent Errores(ex.Message)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
+    Public Function verEntidadDescripcionSISTEMA(ByVal idEntidad As Integer, ByVal idSistema As Integer)
+
+        Dim Query As String = "sistema.SISTEMAID as IdSistema,sistema.SISTEMANOMBRE as Sistema" &
+        " from entidad,DOMINIO,SISTEMA,ENTIDADDESCRIPCION,ENTIDADDOMINIO,ENTIDADSISTEMATIPODATOS" &
+        " where ENTIDAD.ENTIDADID=ENTIDADDESCRIPCION.ENTIDADID and ENTIDAD.ENTIDADID=ENTIDADDOMINIO.ENTIDADID and" &
+        " ENTIDAD.ENTIDADID=ENTIDADSISTEMATIPODATOS.ENTIDADID and ENTIDAD.ENTIDADID=" & idEntidad & " and sistema.sistemaid =" & idSistema & ""
+
+        Try
+            conectar()
+            Dim cmd As New SqlCommand(Query, conn)
+            cmd.CommandType = CommandType.Text
+            Dim resultado As SqlDataReader = cmd.ExecuteReader
+            Dim tablas As DataTable = New DataTable
+
+            tablas.Load(resultado)
+            Return tablas
+
+        Catch ex As Exception
+            RaiseEvent Errores(ex.Message)
+            Return Nothing
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class
